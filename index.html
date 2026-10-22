@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rita Shimada (島田) — Washi &amp; Sincretismo Panorâmico</title>
+  <meta name="description" content="Galeria visual de Rita Shimada. Colagem em papel washi rasgado à mão e sincretismo nipo-brasileiro." />
+
+  <!-- Google Fonts: Cormorant Garamond & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            clay: '#A0522D',
+            stone: '#8B8680',
+            cream: '#FAF0E6',
+            charcoal: '#36454F',
+            matcha: '#6B7B3A',
+            indigo: '#3F51B5',
+            gold: '#D4AF37',
+            blush: '#E8C4B8',
+            error: '#9E3B33'
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          },
+          borderRadius: {
+            none: '0px',
+            DEFAULT: '0px'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* ==========================================================================
+       DESIGN.MD TOKENS — CERÂMICA WABI-SABI (DENSITY 3/10, 0PX RADIUS)
+       ========================================================================== */
+    :root {
+      --clay: #A0522D;
+      --clay-dark: #8A4423;
+      --stone: #8B8680;
+      --cream: #FAF0E6;
+      --cream-subtle: #F3E5D7;
+      --charcoal: #36454F;
+      --charcoal-subtle: #2C3942;
+      --matcha: #6B7B3A;
+      --indigo: #3F51B5;
+      --gold: #D4AF37;
+      --blush: #E8C4B8;
+      --error: #9E3B33;
+
+      --bg-surface: var(--cream);
+      --bg-elevated: var(--cream-subtle);
+      --text-main: var(--charcoal);
+      --text-muted: var(--stone);
+      --border-stroke: rgba(139, 134, 128, 0.38);
+
+      /* Z-index Contract from DESIGN.md */
+      --z-base: 0;
+      --z-sticky-nav: 100;
+      --z-overlay: 200;
+      --z-modal: 300;
+      --z-toast: 500;
+    }
+
+    html.dark {
+      --bg-surface: var(--charcoal);
+      --bg-elevated: var(--charcoal-subtle);
+      --text-main: var(--cream);
+      --text-muted: #C2BCB4;
+      --border-stroke: rgba(250, 240, 230, 0.22);
+    }
+
+    /* Strict 0px Corner Radius Everywhere */
+    *, *::before, *::after {
+      border-radius: 0px !important;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-surface);
+      color: var(--text-main);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      overflow-x: hidden;
+      transition: background-color 220ms ease-out, color 220ms ease-out;
+    }
+
+    /* Typography Scale from DESIGN.md */
+    .text-hero {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+    }
+
+    .text-h1 {
+      font-size: clamp(1.85rem, 3.2vw, 2.25rem);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+    }
+
+    .text-h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    .text-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* Layout Containment & Vertical Rhythm */
+    .wabi-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .wabi-section {
+      padding-top: clamp(4rem, 7vw, 7rem);
+      padding-bottom: clamp(4rem, 7vw, 7rem);
+      position: relative;
+    }
+
+    /* Subtle Washi & Ceramic Crackle Texture */
+    .washi-surface {
+      background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.036'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg width='160' height='160' viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 40 L55 58 L95 20 L160 35 M55 58 L42 125 L0 140 M95 20 L118 95 L160 105' stroke='%238B8680' stroke-width='0.4' fill='none' opacity='0.14'/%3E%3C/svg%3E");
+    }
+
+    /* ==========================================================================
+       SAFE MOTION ARCHITECTURE:
+       Images are NEVER hidden by opacity:0 or clip-path masks that could fail.
+       Text and cards animate gently with transform + subtle motion.
+       ========================================================================== */
+    @keyframes floatIn {
+      from {
+        transform: translateY(14px);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    .motion-float {
+      animation: floatIn 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .wabi-frame {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-stroke);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      position: relative;
+      transition: transform 260ms ease-out, border-color 260ms ease-out, box-shadow 260ms ease-out;
+    }
+
+    .wabi-frame:hover {
+      border-color: var(--clay);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Gold Kintsugi Seam Lines */
+    .kintsugi-seam-top {
+      border-top: 1.5px solid var(--gold);
+    }
+
+    .kintsugi-seam-bottom {
+      border-bottom: 1.5px solid var(--gold);
+    }
+
+    .kintsugi-corner {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      pointer-events: none;
+      z-index: 15;
+      opacity: 0.65;
+      transition: opacity 250ms ease-out, transform 250ms ease-out;
+    }
+
+    .wabi-frame:hover .kintsugi-corner {
+      opacity: 1;
+      transform: scale(1.06);
+    }
+
+    /* Buttons per DESIGN.md */
+    .btn-primary {
+      background-color: var(--clay);
+      color: var(--cream);
+      padding: 12px 24px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: 1px solid var(--clay);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      transition: background-color 200ms ease-out, transform 200ms ease-out;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--clay-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary:active {
+      transform: translateY(1px);
+    }
+
+    .btn-ghost {
+      background-color: transparent;
+      color: var(--text-main);
+      padding: 10px 18px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: 1.5px solid var(--stone);
+      transition: background-color 200ms ease-out, border-color 200ms ease-out, transform 200ms ease-out;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+    }
+
+    .btn-ghost:hover {
+      background-color: rgba(160, 82, 45, 0.08);
+      border-color: var(--clay);
+    }
+
+    /* Interactive Hotspot Pins on Pan-Zoom Mural */
+    .pulse-pin {
+      width: 34px;
+      height: 34px;
+      background-color: rgba(54, 69, 79, 0.92);
+      color: var(--cream);
+      border: 1.5px solid var(--gold);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 220ms ease-out, background-color 220ms ease-out;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      z-index: 20;
+    }
+
+    .pulse-pin:hover,
+    .pulse-pin.active {
+      background-color: var(--clay);
+      transform: scale(1.18);
+    }
+
+    /* Panoramic Full-Bleed Showcase Containers */
+    .panorama-viewport {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      overflow: hidden;
+    }
+
+    /* Inputs per DESIGN.md */
+    .wabi-input {
+      width: 100%;
+      background-color: var(--bg-surface);
+      color: var(--text-main);
+      border: 1px solid var(--stone);
+      padding: 12px 14px;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.05rem;
+      transition: border-color 200ms ease-out;
+    }
+
+    .wabi-input:focus {
+      outline: 2px solid var(--indigo);
+      outline-offset: 2px;
+      border-color: var(--indigo);
+    }
+
+    .wabi-input.input-error {
+      border-color: var(--error);
+      outline-color: var(--error);
+    }
+
+    /* Subtle Custom Cursor Ring (Desktop Only) */
+    #cursor-ring {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 28px;
+      height: 28px;
+      border: 1px solid var(--gold);
+      pointer-events: none;
+      z-index: 450;
+      transform: translate3d(-100px, -100px, 0);
+      transition: width 200ms ease-out, height 200ms ease-out, background-color 200ms ease-out, border-color 200ms ease-out;
+      will-change: transform;
+    }
+
+    #cursor-ring.is-hovering {
+      width: 52px;
+      height: 52px;
+      background-color: rgba(212, 175, 55, 0.12);
+      border-color: var(--clay);
+    }
+
+    @media (pointer: coarse) {
+      #cursor-ring { display: none; }
+    }
+  </style>
+</head>
+
+<body class="washi-surface antialiased selection:bg-clay selection:text-cream">
+
+  <!-- Custom Subtle Cursor Follower -->
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ========================================================================
+       SCROLL-DRIVEN KINTSUGI GOLD SEAM (FIXED BACKGROUND LAYER, z-index: 0)
+       ======================================================================== -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden" style="z-index: var(--z-base);" aria-hidden="true">
+    <svg class="w-full h-full opacity-40" viewBox="0 0 1440 1200" fill="none" preserveAspectRatio="none">
+      <path
+        id="scroll-kintsugi-line"
+        d="M1190 0 L1140 180 L1210 340 L1095 540 L1160 740 L1040 940 L1110 1200"
+        stroke="#D4AF37"
+        stroke-width="1.4"
+        stroke-dasharray="1500"
+        stroke-dashoffset="1200"
+      />
+      <path
+        id="scroll-kintsugi-branch"
+        d="M1140 180 L1290 250 M1095 540 L940 620"
+        stroke="#D4AF37"
+        stroke-width="0.9"
+        stroke-dasharray="400"
+        stroke-dashoffset="300"
+      />
+    </svg>
+  </div>
+
+  <!-- ========================================================================
+       1. STICKY MINIMAL HEADER (z-index: 100)
+       ======================================================================== -->
+  <header class="sticky top-0 w-full border-b border-stone/35 transition-colors duration-200" style="z-index: var(--z-sticky-nav); background-color: var(--bg-surface);">
+    <div class="wabi-container h-20 flex items-center justify-between">
+      
+      <!-- Brand Identity + Hanko Stamp 島田 -->
+      <a href="#hero" class="flex items-center gap-3 group" aria-label="Rita Shimada — Início">
+        <div class="w-8 h-10 bg-[#B22222] text-cream flex flex-col items-center justify-center border border-[#8B1A1A] transition-transform duration-200 group-hover:translate-y-[-1px]">
+          <span class="text-[11px] leading-none font-serif font-bold">島</span>
+          <span class="text-[11px] leading-none font-serif font-bold mt-0.5">田</span>
+        </div>
+        <span class="font-serif text-lg sm:text-xl font-bold tracking-[0.26em] uppercase">Rita Shimada</span>
+      </a>
+
+      <!-- Minimal Navigation -->
+      <nav class="hidden md:flex items-center gap-9 text-meta" aria-label="Navegação Principal">
+        <a href="#hero" class="hover:text-clay transition-colors">01 · Identidade</a>
+        <a href="#mural-buda-jesus" class="hover:text-clay transition-colors">02 · Mural Panorâmico</a>
+        <a href="#obras" class="hover:text-clay transition-colors">03 · Amazonas</a>
+        <a href="#santuario-panoramico" class="hover:text-clay transition-colors">04 · Templo</a>
+        <a href="#contato" class="hover:text-clay transition-colors">05 · Contato</a>
+      </nav>
+
+      <!-- Surface Mode Switcher (Washi Cream <-> Raku Charcoal) -->
+      <div class="flex items-center gap-3">
+        <button
+          id="theme-btn"
+          type="button"
+          class="px-3.5 py-2 border border-stone/60 hover:border-clay text-meta flex items-center gap-2 transition-colors"
+          aria-label="Alternar superfície clara ou escura"
+        >
+          <span class="w-2 h-2 bg-charcoal dark:bg-gold inline-block"></span>
+          <span id="theme-text">Raku</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         2. HERO SECTION (min-h-[100dvh], Asymmetric 4 + 8 Grid)
+         IMAGE 1: Rita Shimada Japanese-Inspired Paper Collage.png
+         ====================================================================== -->
+    <section id="hero" class="min-h-[100dvh] flex items-center py-12 lg:py-16 border-b border-stone/30">
+      <div class="wabi-container w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          
+          <!-- Left 4 Columns: Ultra-concise poetic identity -->
+          <div class="lg:col-span-4 space-y-6 motion-float">
+            <div class="inline-flex items-center gap-2 text-meta text-stone">
+              <span class="w-2 h-2 bg-clay"></span>
+              <span>SÃO PAULO · KYOTO // CHIGIRI-E</span>
+            </div>
+
+            <h1 class="text-hero">
+              Papel rasgado.<br />
+              <span class="italic font-normal text-clay">Dois mundos.</span>
+            </h1>
+
+            <p class="text-lg text-stone italic font-serif max-w-xs">
+              Fibras de kozo e mata tropical unidas à mão, sem lâmina e sem pincel.
+            </p>
+
+            <div class="pt-2 flex flex-wrap items-center gap-3">
+              <a href="#mural-buda-jesus" class="btn-primary">
+                <span>Ver Painel Panorâmico</span>
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right 8 Columns: Full Showcase of Rita Shimada Japanese-Inspired Paper Collage.png -->
+          <div class="lg:col-span-8">
+            <figure
+              id="hero-tilt-card"
+              class="wabi-frame p-3 sm:p-5 cursor-pointer group"
+              onclick="openLightbox(0)"
+              data-cursor-expand
+            >
+              <svg class="kintsugi-corner -top-2 -right-2" viewBox="0 0 48 48" fill="none">
+                <path d="M0 8 L28 12 L40 48 M28 12 L48 0" stroke="#D4AF37" stroke-width="1.5" />
+              </svg>
+
+              <div class="relative overflow-hidden border border-stone/30 bg-cream">
+                <img
+                  id="img-hero-collage"
+                  src="Rita Shimada Japanese-Inspired Paper Collage.png"
+                  alt="Rita Shimada — Colagem em papel washi com sol vermelho, nuvem rasgada à mão, flor de cerejeira e selo Shimada (島田)"
+                  class="w-full h-auto block transition-transform duration-500 ease-out group-hover:scale-[1.025]"
+                  onerror="if(!this.dataset.f1){this.dataset.f1='1';this.src='./Rita Shimada Japanese-Inspired Paper Collage.png';}"
+                />
+              </div>
+
+              <figcaption class="pt-3.5 flex items-center justify-between text-meta text-stone">
+                <span>01 / IDENTIDADE · HINOMARU &amp; SAKURA (島田)</span>
+                <span class="text-clay group-hover:translate-x-1 transition-transform">LUPA TÁTIL [+]</span>
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. FULL-WIDTH MONUMENTAL PANORAMA: `jesus_buda_3.jpg` / `jesus_buda.jpg`
+         100% VISIBLE IMMEDIATELY (NO CLIP-PATH OR OPACITY:0 BLOCKERS)
+         Exact attached image with automatic fallback chain across attached filenames
+         ====================================================================== -->
+    <section id="mural-buda-jesus" class="py-14 lg:py-20 border-b border-stone/30" style="background-color: var(--bg-elevated);">
+      
+      <!-- Top Controls Header inside Container -->
+      <div class="wabi-container mb-6">
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-5">
+          <div>
+            <span class="text-meta text-clay block mb-1">// 02 · MURAL PANORÂMICO MONUMENTAL (280 × 140 CM)</span>
+            <h2 class="text-h1">Paz Entre Trópicos — Buda &amp; Jesus (平和)</h2>
+          </div>
+
+          <!-- Interactive Panoramic Focus Buttons -->
+          <div class="flex flex-wrap items-center gap-2" role="tablist" aria-label="Foco panorâmico na obra Buda e Jesus">
+            <button type="button" class="zoom-pill px-3 py-1.5 border border-clay bg-clay text-cream text-meta transition-colors" onclick="panToMuralSpot(-1)">
+              Panorâmica 100%
+            </button>
+            <button type="button" class="zoom-pill px-3 py-1.5 border border-stone/60 text-meta hover:border-clay transition-colors" onclick="panToMuralSpot(0)">
+              01 · Pagode &amp; Paz (平和)
+            </button>
+            <button type="button" class="zoom-pill px-3 py-1.5 border border-stone/60 text-meta hover:border-clay transition-colors" onclick="panToMuralSpot(1)">
+              02 · Buda em Washi
+            </button>
+            <button type="button" class="zoom-pill px-3 py-1.5 border border-stone/60 text-meta hover:border-clay transition-colors" onclick="panToMuralSpot(2)">
+              03 · Face de Cristo
+            </button>
+            <button type="button" class="zoom-pill px-3 py-1.5 border border-stone/60 text-meta hover:border-clay transition-colors" onclick="panToMuralSpot(3)">
+              04 · Tucano &amp; Redentor
+            </button>
+            <button type="button" class="zoom-pill px-3 py-1.5 border border-stone/60 text-meta hover:border-clay transition-colors" onclick="panToMuralSpot(4)">
+              05 · Café &amp; Violão
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- FULL-BLEED PANORAMIC VIEWPORT (100vw across the screen, respecting horizontal panoramic aspect ratio) -->
+      <div class="panorama-viewport kintsugi-seam-top kintsugi-seam-bottom bg-charcoal shadow-sm">
+        <div
+          id="mural-pan-container"
+          class="relative w-full overflow-hidden select-none"
+        >
+          <!-- Transformable Panoramic Stage — Always Visible (opacity: 1, scale: 1) -->
+          <div
+            id="mural-zoom-stage"
+            class="relative w-full transition-transform duration-500 ease-out origin-center"
+            style="transform: scale(1) translate3d(0%, 0%, 0);"
+          >
+            <img
+              id="img-jesus-buda"
+              src="jesus_buda_3.jpg"
+              alt="Painel Panorâmico Paz Entre Trópicos (平和) — Buda e Jesus Cristo em colagem de papel washi por Rita Shimada"
+              class="w-full h-auto block"
+              onerror="if(!this.dataset.try1){this.dataset.try1='1';this.src='jesus_buda_2.jpg';}else if(!this.dataset.try2){this.dataset.try2='1';this.src='jesus_buda.jpg';}else if(!this.dataset.try3){this.dataset.try3='1';this.src='./jesus_buda_3.jpg';}else if(!this.dataset.try4){this.dataset.try4='1';this.src='./jesus_buda.jpg';}"
+            />
+
+            <!-- 5 Interactive Hotspot Pins over the Panoramic Collage -->
+            <button type="button" class="pulse-pin absolute -translate-x-1/2 -translate-y-1/2" style="left: 12%; top: 43%;" onclick="panToMuralSpot(0)" aria-label="Detalhe 01: Pagode, Sol Vermelho e Caligrafia Paz">01</button>
+            <button type="button" class="pulse-pin absolute -translate-x-1/2 -translate-y-1/2" style="left: 34%; top: 45%;" onclick="panToMuralSpot(1)" aria-label="Detalhe 02: Buda em mosaico de papel">02</button>
+            <button type="button" class="pulse-pin absolute -translate-x-1/2 -translate-y-1/2" style="left: 65%; top: 45%;" onclick="panToMuralSpot(2)" aria-label="Detalhe 03: Jesus Cristo em colagem tropical">03</button>
+            <button type="button" class="pulse-pin absolute -translate-x-1/2 -translate-y-1/2" style="left: 86%; top: 27%;" onclick="panToMuralSpot(3)" aria-label="Detalhe 04: Tucano e Cristo Redentor">04</button>
+            <button type="button" class="pulse-pin absolute -translate-x-1/2 -translate-y-1/2" style="left: 89%; top: 82%;" onclick="panToMuralSpot(4)" aria-label="Detalhe 05: Favela, Xícara de Café e Violão">05</button>
+          </div>
+
+          <!-- Subtle Gold Kintsugi Overlay Line at Bottom Edge -->
+          <div class="pointer-events-none absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent opacity-70"></div>
+        </div>
+      </div>
+
+      <!-- Panoramic Caption & Controls Bar -->
+      <div class="wabi-container pt-5">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="flex flex-wrap items-center gap-3">
+            <span id="mural-spot-tag" class="text-meta px-2.5 py-1 bg-clay text-cream">VISTA PANORÂMICA · 4.200 FRAGMENTOS</span>
+            <p id="mural-spot-caption" class="font-serif italic text-lg">
+              Do pagode japonês, tsuru de origami e Buda à esquerda ao Cristo, tucano, Redentor e café brasileiro à direita.
+            </p>
+          </div>
+          <div class="flex items-center gap-3 shrink-0">
+            <button type="button" onclick="openLightbox(1)" class="btn-ghost py-1.5 px-3 text-meta">
+              ABRIR OBRA NA LUPA [+]
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ======================================================================
+         4. ASYMMETRIC GALLERY SHOWCASE
+         IMAGE 3: Koi in the Amazon River Collage.png (8 Cols) + Detail Card (4 Cols)
+         ====================================================================== -->
+    <section id="obras" class="wabi-section">
+      <div class="wabi-container">
+        
+        <div class="flex items-baseline justify-between mb-10">
+          <div>
+            <span class="text-meta text-clay block mb-1">// 03 · COLAGEM EM PAPEL WASHI</span>
+            <h2 class="text-h1">Koi no Rio Amazonas (亞馬遜)</h2>
+          </div>
+          <span class="text-meta text-stone hidden sm:inline">FIBRAS DE KOZO &amp; OURO KINTSUGI</span>
+        </div>
+
+        <!-- Asymmetric 8 + 4 Grid (No 3-equal-columns per DESIGN.md) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          
+          <!-- Left 8 Columns: Koi in the Amazon River Collage.png -->
+          <article class="lg:col-span-8" data-parallax="0.025">
+            <figure
+              class="wabi-frame p-3 sm:p-5 cursor-pointer group"
+              onclick="openLightbox(2)"
+              data-cursor-expand
+            >
+              <svg class="kintsugi-corner -bottom-2 -left-2" viewBox="0 0 48 48" fill="none">
+                <path d="M48 40 L20 34 L8 0 M20 34 L0 48" stroke="#D4AF37" stroke-width="1.5" />
+              </svg>
+
+              <div class="relative overflow-hidden border border-stone/30 bg-charcoal">
+                <img
+                  id="img-koi-amazon"
+                  src="Koi in the Amazon River Collage.png"
+                  alt="Nishikigoi no Rio Amazonas (亞馬遜) — Colagem em papel washi de Rita Shimada"
+                  class="w-full h-auto block transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                  onerror="if(!this.dataset.f1){this.dataset.f1='1';this.src='./Koi in the Amazon River Collage.png';}"
+                />
+                <div class="absolute top-3 left-3 bg-charcoal/85 text-cream px-2.5 py-1 text-meta border border-gold/50">
+                  亞馬遜 · AMAZONAS
+                </div>
+              </div>
+
+              <figcaption class="pt-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+                <div>
+                  <h3 class="text-h2 font-bold">Amazonas (亞馬遜)</h3>
+                  <p class="text-stone italic text-base">Carpa Nishikigoi nadando nas águas esmeraldas da floresta · 195 × 110 cm</p>
+                </div>
+                <span class="text-meta text-clay shrink-0">AMPLIAR OBRA [+]</span>
+              </figcaption>
+            </figure>
+          </article>
+
+          <!-- Right 4 Columns: Poetic Essence & Secondary Preview -->
+          <aside class="lg:col-span-4 space-y-8" data-parallax="-0.02">
+            <div class="wabi-frame p-6 space-y-4">
+              <div class="flex items-center justify-between text-meta text-clay">
+                <span>TÉCNICA CHIGIRI-E</span>
+                <span>亞馬遜</span>
+              </div>
+              <p class="font-serif italic text-xl leading-relaxed">
+                “As nervuras translúcidas das nadadeiras são folhas esqueletizadas colhidas na margem do Rio Negro.”
+              </p>
+              <div class="pt-3 border-t border-stone/30 text-meta text-stone space-y-1">
+                <div>SUPORTE: WASHI KOZO 90G/M²</div>
+                <div>DETALHES: FOLHA DE OURO 24K</div>
+                <div>SELO HANKO: 亞馬遜 (AMAZONAS)</div>
+              </div>
+            </div>
+
+            <!-- Secondary Framed Study of Rita Shimada Collage -->
+            <figure
+              class="wabi-frame p-3 cursor-pointer group"
+              onclick="openLightbox(0)"
+              data-cursor-expand
+            >
+              <div class="relative overflow-hidden border border-stone/30">
+                <img
+                  src="Rita Shimada Japanese-Inspired Paper Collage.png"
+                  alt="Hinomaru & Sakura (島田) — Rita Shimada"
+                  class="w-full h-auto block transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                  onerror="if(!this.dataset.f1){this.dataset.f1='1';this.src='./Rita Shimada Japanese-Inspired Paper Collage.png';}"
+                />
+              </div>
+              <figcaption class="pt-2.5 flex items-center justify-between text-meta text-stone">
+                <span>MATRIZ 島田 · SAKURA</span>
+                <span class="text-clay">VER [+]</span>
+              </figcaption>
+            </figure>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. AMBIENT ILLUSTRATIVE PANORAMIC BANNER: `templo_3.jpg` / `templo.jpg`
+         Strictly decorative full-bleed architectural/nature divider (NOT an artwork).
+         NO zoom, NO click, NO lightbox, pointer-events: none, user-select: none.
+         ====================================================================== -->
+    <section id="santuario-panoramico" class="py-6 select-none" aria-label="Paisagem ilustrativa do Santuário na Mata Atlântica">
+      
+      <!-- Panoramic Full-Bleed Ribbon (100vw) -->
+      <div class="panorama-viewport kintsugi-seam-top kintsugi-seam-bottom relative bg-charcoal pointer-events-none select-none">
+        
+        <!-- Non-interactive Panoramic Container -->
+        <div class="relative w-full h-[46vh] sm:h-[58vh] min-h-[340px] max-h-[600px] overflow-hidden pointer-events-none select-none">
+          <img
+            id="img-templo-panorama"
+            src="templo_3.jpg"
+            alt="Paisagem ilustrativa do Portal Torii cercado por bromélias, samambaias e bananeiras na Mata Atlântica"
+            draggable="false"
+            class="w-full h-[116%] -top-[8%] relative object-cover object-center block pointer-events-none select-none"
+            onerror="if(!this.dataset.try1){this.dataset.try1='1';this.src='templo_2.jpg';}else if(!this.dataset.try2){this.dataset.try2='1';this.src='templo.jpg';}else if(!this.dataset.try3){this.dataset.try3='1';this.src='./templo_3.jpg';}else if(!this.dataset.try4){this.dataset.try4='1';this.src='./templo.jpg';}"
+          />
+
+          <!-- Subtle Natural Atmosphere Vignette -->
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-charcoal/20"></div>
+
+          <!-- Decorative Kintsugi Gold Seam SVG Across Panorama Corner -->
+          <svg class="pointer-events-none absolute top-0 left-12 w-64 h-24 opacity-80" viewBox="0 0 260 90" fill="none">
+            <path d="M0 0 L68 34 L145 18 L240 65" stroke="#D4AF37" stroke-width="1.5" />
+            <path d="M68 34 L45 88" stroke="#D4AF37" stroke-width="1" />
+          </svg>
+
+          <!-- Discreet Non-Interactive Ambient Caption -->
+          <div class="pointer-events-none absolute inset-x-0 bottom-0 p-5 sm:p-8">
+            <div class="wabi-container flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+              <div class="bg-charcoal/85 border-l-2 border-gold px-4 py-2.5 text-cream max-w-md">
+                <span class="text-meta text-gold block">SANTUÁRIO MATA ATLÂNTICA · SERRA DO MAR</span>
+                <p class="font-serif italic text-cream/90 text-base">
+                  Onde o Torii encontra a bromélia — paisagem contemplativa que inspira o ateliê.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ======================================================================
+         6. MINIMALIST ATELIER CONTACT
+         ====================================================================== -->
+    <section id="contato" class="wabi-section" style="background-color: var(--bg-elevated);">
+      <div class="wabi-container">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          
+          <!-- Left 5 Cols: Minimal Invitation -->
+          <div class="lg:col-span-5 space-y-4">
+            <span class="text-meta text-clay block">// 05 · ATELIÊ &amp; ACERVO</span>
+            <h2 class="text-h1">Aquisições &amp; Visitas</h2>
+            <p class="text-stone font-serif italic text-lg max-w-sm">
+              Solicite o dossiê das obras originais ou agende uma visita contemplativa ao Santuário no Vale do Ribeira.
+            </p>
+            <div class="pt-4 text-meta text-stone space-y-1">
+              <div>SÃO PAULO · VALE DO RIBEIRA · KYOTO</div>
+              <div>ATELIE@RITASHIMADA.ART.BR</div>
+            </div>
+          </div>
+
+          <!-- Right 7 Cols: Clean Wabi-Sabi Form (Strict DESIGN.md Input rules) -->
+          <div class="lg:col-span-7 wabi-frame p-6 sm:p-8">
+            <form id="contact-form" novalidate class="space-y-5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="name" class="block text-meta mb-2">Nome <span class="text-error">*</span></label>
+                  <input type="text" id="name" class="wabi-input" placeholder="Seu nome completo" required />
+                  <p id="err-name" class="text-meta text-error mt-1.5 hidden">Informe seu nome.</p>
+                </div>
+                <div>
+                  <label for="email" class="block text-meta mb-2">E-mail <span class="text-error">*</span></label>
+                  <input type="email" id="email" class="wabi-input" placeholder="nome@dominio.com" required />
+                  <p id="err-email" class="text-meta text-error mt-1.5 hidden">Informe um e-mail válido.</p>
+                </div>
+              </div>
+
+              <div>
+                <label for="artwork" class="block text-meta mb-2">Obra de Interesse</label>
+                <select id="artwork" class="wabi-input">
+                  <option value="Paz Entre Trópicos (平和)">01 · Mural Panorâmico — Paz Entre Trópicos: Buda &amp; Jesus (平和)</option>
+                  <option value="Amazonas (亞馬遜)">02 · Amazonas — Carpa no Rio Amazonas (亞馬遜)</option>
+                  <option value="Hinomaru & Sakura (島田)">03 · Identidade — Hinomaru &amp; Sakura (島田)</option>
+                  <option value="Santuário Torii">04 · Visita ao Santuário Torii na Mata Atlântica</option>
+                </select>
+              </div>
+
+              <div class="pt-2 flex items-center justify-between gap-4">
+                <span class="text-meta text-stone">CHANCELA AUTORAL 島田</span>
+                <button type="submit" class="btn-primary">
+                  <span>Solicitar Dossiê</span>
+                </button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       MINIMAL FOOTER
+       ======================================================================== -->
+  <footer class="border-t border-stone/30 py-8" style="background-color: var(--bg-surface);">
+    <div class="wabi-container flex flex-col sm:flex-row items-center justify-between gap-4 text-meta text-stone">
+      <div class="flex items-center gap-3">
+        <div class="w-6 h-7 bg-[#B22222] text-cream flex flex-col items-center justify-center text-[9px] font-serif font-bold leading-none">
+          <span>島</span><span>田</span>
+        </div>
+        <span>© 2026 RITA SHIMADA · CERÂMICA WABI-SABI</span>
+      </div>
+      <span>SÃO PAULO · KYOTO · AMAZÔNIA</span>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       HIGH-RES LIGHTBOX MODAL WITH MAGNIFYING LOUPE (z-index: 300)
+       Strictly for the 3 Washi Collage Artworks (Temple photo excluded)
+       ======================================================================== -->
+  <div
+    id="lightbox-modal"
+    class="fixed inset-0 hidden items-center justify-center p-4 sm:p-8"
+    style="z-index: var(--z-modal); background-color: rgba(54, 69, 79, 0.95);"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="lb-title"
+  >
+    <div class="max-w-6xl w-full flex flex-col gap-4">
+      <!-- Top Bar -->
+      <div class="flex items-center justify-between text-cream border-b border-cream/20 pb-3">
+        <div>
+          <span id="lb-index" class="text-meta text-gold block">01 / 03</span>
+          <h3 id="lb-title" class="text-h2 font-serif">Título</h3>
+        </div>
+        <div class="flex items-center gap-3">
+          <button type="button" onclick="stepLightbox(-1)" class="px-3 py-1.5 border border-cream/30 text-meta hover:border-gold">← ANTERIOR</button>
+          <button type="button" onclick="stepLightbox(1)" class="px-3 py-1.5 border border-cream/30 text-meta hover:border-gold">PRÓXIMA →</button>
+          <button type="button" onclick="closeLightbox()" class="px-3.5 py-1.5 bg-clay text-cream text-meta">FECHAR [ESC]</button>
+        </div>
+      </div>
+
+      <!-- Image Container with Interactive Hover Zoom -->
+      <div id="lb-stage" class="relative overflow-hidden border border-gold/40 bg-charcoal max-h-[75vh] flex items-center justify-center cursor-crosshair">
+        <img
+          id="lb-img"
+          src=""
+          alt=""
+          class="max-h-[75vh] w-auto object-contain transition-transform duration-200 ease-out"
+        />
+      </div>
+
+      <!-- Minimal Caption -->
+      <div class="flex items-center justify-between text-meta text-cream/80">
+        <span id="lb-caption"></span>
+        <span>MOVA O CURSOR SOBRE A OBRA PARA LUPA DE FIBRAS (2.2×)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       TOAST NOTIFICATION (z-index: 500)
+       ======================================================================== -->
+  <div
+    id="toast"
+    class="fixed bottom-6 right-6 hidden p-4 border border-matcha bg-cream text-charcoal shadow-lg"
+    style="z-index: var(--z-toast);"
+    role="status"
+  >
+    <div class="flex items-center gap-3">
+      <span class="w-2.5 h-2.5 bg-matcha"></span>
+      <span id="toast-msg" class="text-meta">Solicitação registrada no Ateliê Shimada (島田).</span>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       INTERACTION & PANORAMIC ENGINE SCRIPT
+       ======================================================================== -->
+  <script>
+    /* ------------------------------------------------------------------------
+       1. ARTWORKS CATALOG FOR LIGHTBOX (ONLY THE 3 COLLAGE ARTWORKS)
+          The Temple photo is strictly an ambient panorama and is excluded here.
+       ------------------------------------------------------------------------ */
+    const GALLERY_WORKS = [
+      {
+        id: 'rita',
+        domId: 'img-hero-collage',
+        src: 'Rita Shimada Japanese-Inspired Paper Collage.png',
+        title: 'Hinomaru & Sakura (島田)',
+        caption: 'Papel Washi artesanal rasgado à mão, urucum e carvão sumi · 140 × 80 cm'
+      },
+      {
+        id: 'jesus_buda',
+        domId: 'img-jesus-buda',
+        src: 'jesus_buda_3.jpg',
+        title: 'Paz Entre Trópicos — Buda & Jesus (平和)',
+        caption: 'Painel panorâmico monumental em colagem (4.200 fragmentos de papel) · 280 × 140 cm'
+      },
+      {
+        id: 'koi',
+        domId: 'img-koi-amazon',
+        src: 'Koi in the Amazon River Collage.png',
+        title: 'Amazonas (亞馬遜)',
+        caption: 'Carpa Nishikigoi em fibras de kozo, bananeira e ouro Kintsugi · 195 × 110 cm'
+      }
+    ];
+
+    /* ------------------------------------------------------------------------
+       2. INTERACTIVE PAN & ZOOM ON PANORAMIC MURAL ("jesus_buda_3.jpg")
+       ------------------------------------------------------------------------ */
+    const MURAL_SPOTS = [
+      {
+        scale: 1.95,
+        x: '24%',
+        y: '6%',
+        tag: '01 · PAGODE & CALIGRAFIA PAZ (平和)',
+        caption: 'Sol vermelho em papel washi, ramo de sakura, pagode tradicional, ondas Seigaiha e o ideograma 平和 (Paz).'
+      },
+      {
+        scale: 1.95,
+        x: '12%',
+        y: '4%',
+        tag: '02 · SEMBLANTE DE BUDA EM WASHI',
+        caption: 'Rosto meditativo construído inteiramente com fragmentos rasgados de papel artesanal e tecidos de quimono.'
+      },
+      {
+        scale: 1.95,
+        x: '-12%',
+        y: '4%',
+        tag: '03 · FACE DE JESUS CRISTO',
+        caption: 'Olhar sereno esculpido em colagem de fibras naturais, cercado por girassóis e folhas de costela-de-adão.'
+      },
+      {
+        scale: 2.05,
+        x: '-25%',
+        y: '14%',
+        tag: '04 · TUCANO & CRISTO REDENTOR',
+        caption: 'A fauna brasileira e o Cristo Redentor sobre a Baía de Guanabara em recortes de papel.'
+      },
+      {
+        scale: 2.1,
+        x: '-26%',
+        y: '-18%',
+        tag: '05 · FAVELA, BANDEIRA, CAFÉ & VIOLÃO',
+        caption: 'Casario colorido, bandeira do Brasil, violão acústico e a tradicional xícara de café expresso.'
+      }
+    ];
+
+    function panToMuralSpot(index) {
+      const stage = document.getElementById('mural-zoom-stage');
+      const tagEl = document.getElementById('mural-spot-tag');
+      const capEl = document.getElementById('mural-spot-caption');
+      const pins = document.querySelectorAll('#mural-zoom-stage .pulse-pin');
+      const pills = document.querySelectorAll('.zoom-pill');
+
+      pins.forEach((p, idx) => p.classList.toggle('active', idx === index));
+      pills.forEach((pill, idx) => {
+        const isCurrent = idx === index + 1;
+        pill.className = isCurrent
+          ? 'zoom-pill px-3 py-1.5 border border-clay bg-clay text-cream text-meta transition-colors'
+          : 'zoom-pill px-3 py-1.5 border border-stone/60 text-meta hover:border-clay transition-colors';
+      });
+
+      if (index === -1) {
+        stage.style.transform = 'scale(1) translate3d(0%, 0%, 0)';
+        tagEl.textContent = 'VISTA PANORÂMICA · 4.200 FRAGMENTOS';
+        capEl.textContent = 'Do pagode japonês, tsuru de origami e Buda à esquerda ao Cristo, tucano, Redentor e café brasileiro à direita.';
+        return;
+      }
+
+      const spot = MURAL_SPOTS[index];
+      stage.style.transform = `scale(${spot.scale}) translate3d(${spot.x}, ${spot.y}, 0)`;
+      tagEl.textContent = spot.tag;
+      capEl.textContent = spot.caption;
+    }
+
+    /* ------------------------------------------------------------------------
+       3. LIGHTBOX + INTERACTIVE HOVER LOUPE (2.2x) FOR THE 3 ARTWORKS ONLY
+       ------------------------------------------------------------------------ */
+    let activeLightboxIndex = 0;
+    const lbModal = document.getElementById('lightbox-modal');
+    const lbImg = document.getElementById('lb-img');
+    const lbStage = document.getElementById('lb-stage');
+
+    function openLightbox(index) {
+      if (index < 0 || index >= GALLERY_WORKS.length) return;
+      activeLightboxIndex = index;
+      updateLightboxView();
+      lbModal.classList.remove('hidden');
+      lbModal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lbModal.classList.add('hidden');
+      lbModal.classList.remove('flex');
+      lbImg.style.transform = 'scale(1)';
+      document.body.style.overflow = '';
+    }
+
+    function stepLightbox(dir) {
+      activeLightboxIndex = (activeLightboxIndex + dir + GALLERY_WORKS.length) % GALLERY_WORKS.length;
+      updateLightboxView();
+    }
+
+    function updateLightboxView() {
+      const item = GALLERY_WORKS[activeLightboxIndex];
+      document.getElementById('lb-index').textContent = `0${activeLightboxIndex + 1} / 0${GALLERY_WORKS.length}`;
+      document.getElementById('lb-title').textContent = item.title;
+      document.getElementById('lb-caption').textContent = item.caption;
+
+      const pageImg = document.getElementById(item.domId);
+      lbImg.src = pageImg ? pageImg.currentSrc || pageImg.src : item.src;
+      lbImg.alt = item.title;
+      lbImg.style.transform = 'scale(1)';
+    }
+
+    lbStage.addEventListener('mousemove', (e) => {
+      const rect = lbStage.getBoundingClientRect();
+      const xPercent = ((e.clientX - rect.left) / rect.width) * 100;
+      const yPercent = ((e.clientY - rect.top) / rect.height) * 100;
+      lbImg.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+      lbImg.style.transform = 'scale(2.2)';
+    });
+
+    lbStage.addEventListener('mouseleave', () => {
+      lbImg.style.transform = 'scale(1)';
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (lbModal.classList.contains('hidden')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') stepLightbox(1);
+      if (e.key === 'ArrowLeft') stepLightbox(-1);
+    });
+
+    /* ------------------------------------------------------------------------
+       4. 60FPS SCROLL PARALLAX FOR TEMPLE PANORAMA (NO SCALE/ZOOM) & KINTSUGI
+       ------------------------------------------------------------------------ */
+    const kintsugiLine = document.getElementById('scroll-kintsugi-line');
+    const kintsugiBranch = document.getElementById('scroll-kintsugi-branch');
+    const parallaxNodes = document.querySelectorAll('[data-parallax]');
+    const templeImg = document.getElementById('img-templo-panorama');
+    const templeSection = document.getElementById('santuario-panoramico');
+
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollTop = window.scrollY;
+          const docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+          const progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+
+          // Draw gold Kintsugi vein
+          kintsugiLine.style.strokeDashoffset = String(1500 * (1 - progress));
+          kintsugiBranch.style.strokeDashoffset = String(400 * (1 - progress));
+
+          // Panoramic Temple Smooth Vertical Parallax Only (No scale/zoom)
+          if (templeImg && templeSection) {
+            const rect = templeSection.getBoundingClientRect();
+            const viewH = window.innerHeight;
+            if (rect.top < viewH && rect.bottom > 0) {
+              const ratio = (viewH - rect.top) / (viewH + rect.height);
+              const shiftY = (ratio - 0.5) * 42;
+              templeImg.style.transform = `translate3d(0, ${shiftY.toFixed(1)}px, 0)`;
+            }
+          }
+
+          // Subtle card parallax on desktop
+          if (window.innerWidth >= 1024) {
+            parallaxNodes.forEach((node) => {
+              const speed = parseFloat(node.getAttribute('data-parallax') || '0');
+              const yOffset = (scrollTop - node.offsetTop) * speed;
+              node.style.transform = `translate3d(0, ${yOffset.toFixed(1)}px, 0)`;
+            });
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    /* ------------------------------------------------------------------------
+       5. HERO 3D SUBTLE TILT & CUSTOM CURSOR FOLLOWER
+       ------------------------------------------------------------------------ */
+    const heroCard = document.getElementById('hero-tilt-card');
+    heroCard.addEventListener('mousemove', (e) => {
+      if (window.innerWidth < 1024) return;
+      const rect = heroCard.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      heroCard.style.transform = `perspective(1100px) rotateY(${(x * 3.5).toFixed(2)}deg) rotateX(${(-y * 3.5).toFixed(2)}deg)`;
+    });
+
+    heroCard.addEventListener('mouseleave', () => {
+      heroCard.style.transform = 'perspective(1100px) rotateY(0deg) rotateX(0deg)';
+    });
+
+    // Subtle Gold Cursor Ring
+    const cursorRing = document.getElementById('cursor-ring');
+    window.addEventListener('mousemove', (e) => {
+      cursorRing.style.transform = `translate3d(${e.clientX - 14}px, ${e.clientY - 14}px, 0)`;
+    }, { passive: true });
+
+    document.querySelectorAll('[data-cursor-expand], button, a').forEach((el) => {
+      el.addEventListener('mouseenter', () => cursorRing.classList.add('is-hovering'));
+      el.addEventListener('mouseleave', () => cursorRing.classList.remove('is-hovering'));
+    });
+
+    /* ------------------------------------------------------------------------
+       6. THEME SWITCHER (WASHI CREAM <-> RAKU CHARCOAL)
+       ------------------------------------------------------------------------ */
+    const themeBtn = document.getElementById('theme-btn');
+    const themeText = document.getElementById('theme-text');
+
+    themeBtn.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      themeText.textContent = isDark ? 'Washi' : 'Raku';
+    });
+
+    /* ------------------------------------------------------------------------
+       7. MINIMAL CONTACT FORM VALIDATION
+       ------------------------------------------------------------------------ */
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name');
+      const email = document.getElementById('email');
+      const errName = document.getElementById('err-name');
+      const errEmail = document.getElementById('err-email');
+
+      let ok = true;
+      if (!name.value.trim()) {
+        name.classList.add('input-error');
+        errName.classList.remove('hidden');
+        ok = false;
+      } else {
+        name.classList.remove('input-error');
+        errName.classList.add('hidden');
+      }
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+        email.classList.add('input-error');
+        errEmail.classList.remove('hidden');
+        ok = false;
+      } else {
+        email.classList.remove('input-error');
+        errEmail.classList.add('hidden');
+      }
+
+      if (ok) {
+        const toast = document.getElementById('toast');
+        toast.classList.remove('hidden');
+        form.reset();
+        setTimeout(() => toast.classList.add('hidden'), 4500);
+      }
+    });
+  </script>
+</body>
+</html>
